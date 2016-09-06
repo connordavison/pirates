@@ -15,7 +15,7 @@ class BattleCommand extends Command
     protected function configure()
     {
         $this->setName('pirates:battle')
-            ->setDescription('Battle two ships! Example usage: bin/console pirates:battle 15 10 30 20')
+            ->setDescription('Battle two ships!')
             ->addArgument('player_one.attack_points', InputArgument::REQUIRED, 'The attack points for player one')
             ->addArgument('player_one.defence_points', InputArgument::REQUIRED, 'The defence points for player one')
             ->addArgument('player_two.attack_points', InputArgument::REQUIRED, 'The attack points for player two')
