@@ -54,4 +54,9 @@ class Battle
     {
         return $this->turn;
     }
+
+    public function isGameOver()
+    {
+        return $this->attacker->isSunk() || $this->defender->isSunk();
+    }
 }

@@ -75,4 +75,32 @@ class BattleTest extends PHPUnit_Framework_TestCase
         $this->assertSame($this->playerOne, $battle->getTurnDefender());
         $this->assertSame($this->playerTwo, $battle->getTurnAttacker());
     }
+
+    /**
+     * @dataProvider gameoverProvider
+     */
+    public function testIsGameOver(
+        bool $isPlayerOneSunk,
+        bool $isPlayerTwoSunk,
+        bool $isGameOver
+    ) {
+        $battle = new Battle($this->playerOne, $this->playerTwo, $this->calculator);
+
+        $this->playerOne->method('isSunk')->willReturn($isPlayerOneSunk);
+        $this->playerTwo->method('isSunk')->willReturn($isPlayerTwoSunk);
+        $this->assertEquals($isGameOver, $battle->isGameOver());
+    }
+
+    /**
+     * @see testIsGameOver
+     */
+    public function gameoverProvider()
+    {
+        return [
+            [false, false, false],
+            [false, true, true],
+            [true, false, true],
+            [true, true, true],
+        ];
+    }
 }
