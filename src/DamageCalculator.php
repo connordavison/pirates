@@ -4,7 +4,7 @@ namespace Pirates;
 
 class DamageCalculator
 {
-    public function battle(Ship $attacker, Ship $defender): int
+    public function battle(Ship $attacker, Ship $defender)
     {
         if (!$this->passesAccuracyCheck()) {
             return 0;
@@ -21,12 +21,12 @@ class DamageCalculator
         return $damage;
     }
 
-    protected function passesAccuracyCheck(): bool
+    protected function passesAccuracyCheck()
     {
         return rand(0, 100) < 25;
     }
 
-    protected function passesCriticalCheck(): bool
+    protected function passesCriticalCheck()
     {
         return rand(0, 100) < 10;
     }

@@ -21,22 +21,22 @@ class Ship
         $this->health -= $amount;
     }
 
-    public function getHealth(): int
+    public function getHealth()
     {
         return $this->health;
     }
 
-    public function getAttackPoints(): int
+    public function getAttackPoints()
     {
         return $this->attackPoints;
     }
 
-    public function getDefencePoints(): int
+    public function getDefencePoints()
     {
         return $this->defencePoints;
     }
 
-    public function isSunk(): bool
+    public function isSunk()
     {
         return $this->health <= 0;
     }
