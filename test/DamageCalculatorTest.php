@@ -22,16 +22,6 @@ class DamageCalculatorTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedExceptionMessage Sunk ship cannot be attacked.
-     */
-    public function testSunkShipCannotBeAttacked()
-    {
-        $this->defender->method('getHealth')->willReturn(0);
-        $calculator = new DamageCalculator();
-        $calculator->battle($this->attacker, $this->defender);
-    }
-
-    /**
      * @dataProvider attackProvider
      */
     public function testDamageCalculation(
