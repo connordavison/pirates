@@ -29,7 +29,7 @@ class Battle
     public function run()
     {
         if ($this->defender->isSunk()) {
-            throw new \RuntimeException("Defender is already sunk!");
+            throw new \RuntimeException('Defender is already sunk!');
         }
 
         $damage = $this->calculator->battle($this->attacker, $this->defender);

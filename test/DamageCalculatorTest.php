@@ -62,8 +62,8 @@ class DamageCalculatorTest extends PHPUnit_Framework_TestCase
     public function attackProvider()
     {
         return [
-            "A miss yields 0 damage" => [15, 0, false, false, 0],
-            "A miss yields 0 damage when critical" => [15, 0, false, true, 0],
+            'A miss yields 0 damage' => [15, 0, false, false, 0],
+            'A miss yields 0 damage when critical' => [15, 0, false, true, 0],
             "A hit yields damage equal to the attacker's AP" => [15, 0, true, false, 15],
             "A critical hit yields damage equal to triple that of the attacker's AP" => [15, 0, true, true, 45],
             "Damage is decreased by an amount equal to the defender's DP" => [15, 5, true, false, 10],

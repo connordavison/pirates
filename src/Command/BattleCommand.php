@@ -52,7 +52,7 @@ class BattleCommand extends Command
         }
 
         $message = sprintf(
-            "Player %s wins!",
+            'Player %s wins!',
             $battle->getWinner() === $playerOne ? 'one' : 'two'
         );
 
