@@ -1,6 +1,6 @@
 <?php
 
-use Aql\Ship;
+use Pirates\Ship;
 
 class ShipTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,7 +1,7 @@
 <?php
 
-use Aql\DamageCalculator;
-use Aql\Ship;
+use Pirates\DamageCalculator;
+use Pirates\Ship;
 
 class DamageCalculatorTest extends PHPUnit_Framework_TestCase
 {

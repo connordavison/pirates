@@ -1,6 +1,6 @@
 <?php
 
-namespace Aql;
+namespace Pirates;
 
 class Ship
 {
