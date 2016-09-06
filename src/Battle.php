@@ -59,4 +59,9 @@ class Battle
     {
         return $this->attacker->isSunk() || $this->defender->isSunk();
     }
+
+    public function getWinner()
+    {
+        return $this->attacker->isSunk() ? $this->defender : $this->attacker;
+    }
 }
