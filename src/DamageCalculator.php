@@ -23,7 +23,7 @@ class DamageCalculator
 
     protected function passesAccuracyCheck()
     {
-        return rand(0, 100) < 25;
+        return rand(0, 100) >= 25;
     }
 
     protected function passesCriticalCheck()
