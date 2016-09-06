@@ -2,6 +2,10 @@
 
 namespace Pirates;
 
+/**
+ * A Battle is a one-versus-one ship fight where each ship takes turns
+ * attacking.
+ */
 class Battle
 {
     /**
